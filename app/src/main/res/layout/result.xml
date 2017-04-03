@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/result_display"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.mobile_computing.ResultDisplayActivity"
+    android:scrollbars="vertical"
+    android:verticalScrollbarPosition="defaultPosition"
+    android:overScrollMode="ifContentScrolls"
+    android:scrollbarStyle="insideOverlay">
+
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/image"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="2dp"
+        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:cropToPadding="true" />
+
+    <TextView
+        android:text="Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:layout_toRightOf="@+id/image"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/date"
+        android:layout_toRightOf="@+id/image"
+        android:layout_below="@+id/title"
+        android:textStyle="normal|italic" />
+
+    <ToggleButton
+        android:text="Add to Favorites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/starButton"
+        android:layout_toRightOf="@+id/image"
+        android:layout_below="@+id/date"
+        android:textOff="Add to Favorites"
+        android:textOn="Remove from Favorites" />
+
+    <TextView
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:layout_below="@+id/starButton"
+        android:layout_toRightOf="@+id/image"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideOverlay"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:scrollbarSize="14dp"
+        android:scrollbarFadeDuration="600"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:maxLines="500"
+        android:paddingTop="10dp" />
+
+</RelativeLayout>
